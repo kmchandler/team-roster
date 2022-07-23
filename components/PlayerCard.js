@@ -17,7 +17,7 @@ function PlayerCard({ playerObj, onUpdate }) {
       <Card.Img variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
       <Card.Body>
         <Card.Title>{playerObj.name}</Card.Title>
-        <p>Position: {playerObj.position}</p>
+        <p>Role: {playerObj.role}</p>
         <Link href={`/player/edit/${playerObj.firebaseKey}`} passHref>
           <Button variant="info">EDIT</Button>
         </Link>
@@ -31,12 +31,11 @@ function PlayerCard({ playerObj, onUpdate }) {
 
 PlayerCard.propTypes = {
   playerObj: PropTypes.shape({
-    id: PropTypes.string,
+    firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    position: PropTypes.string,
+    role: PropTypes.string,
     uid: PropTypes.string,
-    firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

@@ -19,13 +19,11 @@ function Team() {
     getAllThePlayers();
   }, [user]);
 
-  console.warn(user.uid);
-
   return (
     <div className="text-center my-4">
       <h1>Team</h1>
       <Link href="/new" passHref>
-        <Button>Add A Player</Button>
+        <Button>Add A Team Member</Button>
       </Link>
       <div className="d-flex flex-wrap">
         {players.map((player) => (
