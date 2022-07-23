@@ -11,7 +11,7 @@ export default function NavBar() {
     <Navbar className="navBarDiv" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand>1.21 Jigawatts Productions</Navbar.Brand>
+          <Navbar.Brand className="teamNameNav">1.21 Jigawatts Productions</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

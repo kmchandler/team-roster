@@ -21,7 +21,7 @@ export default function Team() {
 
   return (
     <div className="text-center my-4 teamCardsDiv">
-      <h1>Meet the Jigawatts</h1>
+      <h1 className="teamName">Meet the Jigawatts</h1>
       <Link href="/new" passHref>
         <Button className="teamButton">Add A Team Member</Button>
       </Link>
