@@ -20,12 +20,12 @@ export default function Team() {
   }, [user]);
 
   return (
-    <div className="text-center my-4">
+    <div className="text-center my-4 teamCardsDiv">
       <h1>Meet the Jigawatts</h1>
       <Link href="/new" passHref>
         <Button className="teamButton">Add A Team Member</Button>
       </Link>
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap cardContainer">
         {players.map((player) => (
           <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getAllThePlayers} />
         ))}

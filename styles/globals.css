@@ -31,13 +31,19 @@ body {
   color: #9b9ea2;
 }
 
-.signOutButton:hover {
-  color: #c6c8ca;
+.navLinkColor:hover {
+  color:#DCAE1D
 }
 
 .navLinks {
   display: flex;
-  margin-left: auto;
+  flex-direction: row;
+  justify-self: end;
+}
+
+.navBarDiv {
+  display: flex;
+  flex-direction: row;
 }
 
 .detailsButton {
@@ -72,10 +78,43 @@ body {
   background-color: #7A9D96;
   border-style: solid;
   border-color: #7A9D96;
+  width: 180px;
+  justify-content: center;
+  align-self: center;
 }
 
 .detailsCard {
  display: flex;
  justify-content: center;
  margin-top: 20px;
+}
+
+.teamCardsDiv {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.cardContainer {
+  justify-content: center;
+  align-self: center;
+}
+
+.formHeaderText {
+  color: #7A9D96;
+}
+
+.memberFormContainer {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.memberForm {
+  align-self: center;
+  width: 60%;
+}
+
+.formButton {
+  background-color: #DCAE1D;
+  border-style: solid;
+  border-color: #DCAE1D;
 }
