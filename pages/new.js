@@ -35,7 +35,7 @@ function PlayerForm({ obj }) {
     e.preventDefault();
     if (obj.firebaseKey) {
       updatePlayer(formInput)
-        .then(() => router.push(`/team/${obj.firebaseKey}`));
+        .then(() => router.push('/team'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createPlayer(payload).then(() => {
@@ -60,12 +60,14 @@ function PlayerForm({ obj }) {
           name="role"
           onChange={handleChange}
           className="mb-3"
+          value={formInput.role}
           required
         >
           <option disabled selected key="empty" value="">Select A Role</option>
           <option value="Actor">Actor</option>
           <option value="Assistant Director">Assistant Director</option>
           <option value="Camera Operator">Camera Operator</option>
+          <option value="Clacker">Clacker</option>
           <option value="Director">Director</option>
           <option value="Editor">Editor</option>
           <option value="Foley">Foley</option>
@@ -74,7 +76,7 @@ function PlayerForm({ obj }) {
       </FloatingLabel>
 
       <FloatingLabel controlId="floatingTextarea" label="Additional Notes" className="mb-3">
-        <Form.Control as="textarea" placeholder="Notes" style={{ height: '100px' }} name="notes" value={formInput.notes} onChange={handleChange} required />
+        <Form.Control as="textarea" placeholder="Notes" style={{ height: '100px' }} name="notes" value={formInput.notes} onChange={handleChange} />
       </FloatingLabel>
       <Button type="submit">{obj.firebaseKey ? 'Update' : 'Add'} Member</Button>
     </Form>
