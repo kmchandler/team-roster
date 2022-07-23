@@ -6,7 +6,7 @@ import { useAuth } from '../utils/context/authContext';
 import { getPlayers } from '../api/playerData';
 import PlayerCard from '../components/PlayerCard';
 
-function Team() {
+export default function Team() {
   const [players, setPlayers] = useState([]);
 
   const { user } = useAuth();
@@ -33,5 +33,3 @@ function Team() {
     </div>
   );
 }
-
-export default Team;

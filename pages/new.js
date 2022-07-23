@@ -50,8 +50,8 @@ function PlayerForm({ obj }) {
       <FloatingLabel controlId="floatingInput1" label="Enter First and Last Name" className="mb-3">
         <Form.Control type="text" placeholder="Enter Name" name="name" value={formInput.name} onChange={handleChange} required />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput2" label="Url of Team Member Photo" className="mb-3">
-        <Form.Control type="url" placeholder="Url of Team Member Photo" name="image" value={formInput.imageUrl} onChange={handleChange} required />
+      <FloatingLabel controlId="floatingInput2" label="Photo URL" className="mb-3">
+        <Form.Control type="url" placeholder="Photo URL" name="imageUrl" value={formInput.imageUrl} onChange={handleChange} required />
       </FloatingLabel>
 
       <FloatingLabel controlId="floatingSelect" label="Team Member's Role">
@@ -63,12 +63,13 @@ function PlayerForm({ obj }) {
           required
         >
           <option disabled selected key="empty" value="">Select A Role</option>
+          <option value="Actor">Actor</option>
+          <option value="Assistant Director">Assistant Director</option>
+          <option value="Camera Operator">Camera Operator</option>
           <option value="Director">Director</option>
           <option value="Editor">Editor</option>
-          <option selected value="Actor">Actor</option>
           <option value="Foley">Foley</option>
           <option value="Sound Operator">Sound Operator</option>
-          <option value="Camera Operator">Camera Operator</option>
         </Form.Select>
       </FloatingLabel>
 
