@@ -4,15 +4,17 @@ import Card from 'react-bootstrap/Card';
 
 function DetailsCard({ playerObj }) {
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
-      <Card.Img variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
-      <Card.Body>
-        <Card.Title>{playerObj.name}</Card.Title>
-        <p>Role: {playerObj.role}</p>
-        <p>Phone: {playerObj.phone}</p>
-        <p>E-mail: {playerObj.email}</p>
-      </Card.Body>
-    </Card>
+    <div className="detailsCard">
+      <Card style={{ width: '18rem', margin: '10px' }}>
+        <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
+        <Card.Body className="cardBody">
+          <Card.Title>{playerObj.name}</Card.Title>
+          <p>Role: {playerObj.role}</p>
+          <p>Phone: {playerObj.phone}</p>
+          <p>E-mail: {playerObj.email}</p>
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
 

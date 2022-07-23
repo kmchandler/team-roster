@@ -21,9 +21,9 @@ export default function Team() {
 
   return (
     <div className="text-center my-4">
-      <h1>Team</h1>
+      <h1>Meet the Jigawatts</h1>
       <Link href="/new" passHref>
-        <Button>Add A Team Member</Button>
+        <Button className="teamButton">Add A Team Member</Button>
       </Link>
       <div className="d-flex flex-wrap">
         {players.map((player) => (

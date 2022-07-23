@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Navbar, Container, Nav, Button,
+  Navbar, Container, Nav,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 
@@ -11,7 +11,7 @@ export default function NavBar() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand>1.21 Jiggawats Productions Roster</Navbar.Brand>
+          <Navbar.Brand>1.21 Jigawatts Productions</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -20,13 +20,15 @@ export default function NavBar() {
             {/* <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link> */}
-            <Link passHref href="/team">
-              <Nav.Link>Team</Nav.Link>
-            </Link>
-            <Link passHref href="/new">
-              <Nav.Link>New</Nav.Link>
-            </Link>
-            <Button variant="danger" onClick={signOut}>Sign Out</Button>
+            <div className="navLinks">
+              <Link passHref href="/team">
+                <Nav.Link>Team</Nav.Link>
+              </Link>
+              <Link passHref href="/new">
+                <Nav.Link>New</Nav.Link>
+              </Link>
+              <button type="button" className="signOutButton" onClick={signOut}>Sign Out</button>
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
