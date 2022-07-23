@@ -1,39 +1,42 @@
-{
-  "players": [
-    {
-      "id": 1,
-      "imageUrl": "http://dummyimage.com/136x100.png/cc0000/ffffff",
-      "name": "Mechelle Drable",
-      "position": "Seeker",
-      "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02 "
-    },
-    {
-      "id": 2,
-      "imageUrl": "http://dummyimage.com/211x100.png/5fa2dd/ffffff",
-      "name": "Rita Blois",
-      "position": "Keeper",
-      "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02 "
-    },
-    {
-      "id": 3,
-      "imageUrl": "http://dummyimage.com/211x100.png/dddddd/000000",
-      "name": "Emlyn Attwoull",
-      "position": "Beater",
-      "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02 "
-    },
-    {
-      "id": 4,
-      "imageUrl": "http://dummyimage.com/221x100.png/ff4444/ffffff",
-      "name": "Hersh Rays",
-      "position": "Chaser",
-      "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02 "
-    },
-    {
-      "id": 5,
-      "imageUrl": "http://dummyimage.com/164x100.png/cc0000/ffffff",
-      "name": "Wendie Herche",
-      "position": "Chaser",
-      "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02 "
-    }
-  ]
-}
+[
+  {
+    "firebaseKey": "ca22f836-9e2b-42ff-9cbf-8163f0722665",
+    "imageUrl": "http://dummyimage.com/104x100.png/dddddd/000000",
+    "name": "Bertina Scotchmore",
+    "notes": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+    "role": "Surveyor",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "a72f5a9b-e889-4d71-bd28-b3cf52acad30",
+    "imageUrl": "http://dummyimage.com/110x100.png/dddddd/000000",
+    "name": "Alice Mustoe",
+    "notes": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+    "role": "Subcontractor",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "a48c5751-cdd3-4d7b-b5fa-44160f214b91",
+    "imageUrl": "http://dummyimage.com/250x100.png/ff4444/ffffff",
+    "name": "Park Blinder",
+    "notes": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+    "role": "Project Manager",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "f2b9872f-8e6a-4ba3-89d8-77155e544845",
+    "imageUrl": "http://dummyimage.com/153x100.png/5fa2dd/ffffff",
+    "name": "Patin Mussetti",
+    "notes": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    "role": "Subcontractor",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "9a145dae-cdb6-4187-89ca-d9f5592a1018",
+    "imageUrl": "http://dummyimage.com/131x100.png/5fa2dd/ffffff",
+    "name": "Theo Drennan",
+    "notes": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+    "role": "Engineer",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  }
+]
