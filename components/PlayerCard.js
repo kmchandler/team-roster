@@ -39,3 +39,5 @@ PlayerCard.propTypes = {
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
+
+export default PlayerCard;
