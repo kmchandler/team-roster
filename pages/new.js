@@ -47,49 +47,51 @@ function PlayerForm({ obj }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Add'} Member</h2>
-      <FloatingLabel controlId="floatingInput1" label="Enter First and Last Name" className="mb-3">
-        <Form.Control type="text" placeholder="Enter Name" name="name" value={formInput.name} onChange={handleChange} required />
-      </FloatingLabel>
-      <FloatingLabel controlId="floatingInput2" label="Photo URL" className="mb-3">
-        <Form.Control type="url" placeholder="Photo URL" name="imageUrl" value={formInput.imageUrl} onChange={handleChange} required />
-      </FloatingLabel>
+    <div className="memberFormContainer">
+      <Form className="memberForm" onSubmit={handleSubmit}>
+        <h2 className="formHeaderText mt-5">{obj.firebaseKey ? 'Update' : 'Add'} Member</h2>
+        <FloatingLabel controlId="floatingInput1" label="Enter First and Last Name" className="mb-3">
+          <Form.Control type="text" placeholder="Enter Name" name="name" value={formInput.name} onChange={handleChange} required />
+        </FloatingLabel>
+        <FloatingLabel controlId="floatingInput2" label="Photo URL" className="mb-3">
+          <Form.Control type="url" placeholder="Photo URL" name="imageUrl" value={formInput.imageUrl} onChange={handleChange} required />
+        </FloatingLabel>
 
-      <FloatingLabel controlId="floatingSelect" label="Team Member's Role">
-        <Form.Select
-          aria-label="Role"
-          name="role"
-          onChange={handleChange}
-          className="mb-3"
-          value={formInput.role}
-          required
-        >
-          <option disabled selected key="empty" value="">Select A Role</option>
-          <option value="Actor">Actor</option>
-          <option value="Assistant Director">Assistant Director</option>
-          <option value="Camera Operator">Camera Operator</option>
-          <option value="Clacker">Clacker</option>
-          <option value="Director">Director</option>
-          <option value="Editor">Editor</option>
-          <option value="Foley">Foley</option>
-          <option value="Sound Operator">Sound Operator</option>
-        </Form.Select>
-      </FloatingLabel>
+        <FloatingLabel controlId="floatingSelect" label="Team Member's Role">
+          <Form.Select
+            aria-label="Role"
+            name="role"
+            onChange={handleChange}
+            className="mb-3"
+            value={formInput.role}
+            required
+          >
+            <option disabled selected key="empty" value="">Select A Role</option>
+            <option value="Actor">Actor</option>
+            <option value="Assistant Director">Assistant Director</option>
+            <option value="Camera Operator">Camera Operator</option>
+            <option value="Clacker">Clacker</option>
+            <option value="Director">Director</option>
+            <option value="Editor">Editor</option>
+            <option value="Foley">Foley</option>
+            <option value="Sound Operator">Sound Operator</option>
+          </Form.Select>
+        </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput2" label="Phone Number" className="mb-3">
-        <Form.Control type="tel" placeholder="123-456-7890" name="phone" value={formInput.phone} onChange={handleChange} required />
-      </FloatingLabel>
+        <FloatingLabel controlId="floatingInput2" label="Phone Number" className="mb-3">
+          <Form.Control type="tel" placeholder="123-456-7890" name="phone" value={formInput.phone} onChange={handleChange} required />
+        </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput2" label="E-mail" className="mb-3">
-        <Form.Control type="email" placeholder="E-mail" name="email" value={formInput.email} onChange={handleChange} required />
-      </FloatingLabel>
+        <FloatingLabel controlId="floatingInput2" label="E-mail" className="mb-3">
+          <Form.Control type="email" placeholder="E-mail" name="email" value={formInput.email} onChange={handleChange} required />
+        </FloatingLabel>
 
-      <FloatingLabel controlId="floatingTextarea" label="Additional Notes" className="mb-3">
-        <Form.Control as="textarea" placeholder="Notes" style={{ height: '100px' }} name="notes" value={formInput.notes} onChange={handleChange} />
-      </FloatingLabel>
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Add'} Member</Button>
-    </Form>
+        <FloatingLabel controlId="floatingTextarea" label="Additional Notes" className="mb-3">
+          <Form.Control as="textarea" placeholder="Notes" style={{ height: '100px' }} name="notes" value={formInput.notes} onChange={handleChange} />
+        </FloatingLabel>
+        <Button className="formButton" type="submit">{obj.firebaseKey ? 'Update' : 'Add'} Member</Button>
+      </Form>
+    </div>
   );
 }
 
