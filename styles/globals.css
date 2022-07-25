@@ -30,6 +30,7 @@ body {
   background-color: transparent;
   border: none;
   color: #DCAE1D;
+  margin-right: 12px;
 }
 
 .signOutButton:active {
@@ -260,4 +261,25 @@ body {
   background-color: #7A9D96;
   border: none;
   box-shadow: #000000ad 4px 4px 8px;
+}
+
+.searchBtn {
+  color: #DCAE1D;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.searchBtn:hover {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+#responsive-navbar-nav > form > input {
+  background-color: #00303F;
+  border-color: #DCAE1D;
+  color: #DCAE1D;
+  height: 30px;
+  margin-top: 5px;
 }
