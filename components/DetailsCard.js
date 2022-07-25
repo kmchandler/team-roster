@@ -8,10 +8,10 @@ function DetailsCard({ playerObj }) {
       <Card style={{ width: '18rem', margin: '10px' }}>
         <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
         <Card.Body className="cardBody">
-          <Card.Title>{playerObj.name}</Card.Title>
-          <p>Role: {playerObj.role}</p>
-          <p>Phone: {playerObj.phone}</p>
-          <p>E-mail: {playerObj.email}</p>
+          <Card.Title className="memberNameDetails">{playerObj.name}</Card.Title>
+          <p className="memberRoleDetails">Role: {playerObj.role}</p>
+          <p className="memberPhoneDetails">Phone: {playerObj.phone}</p>
+          <p className="memberEmailDetails">E-mail: {playerObj.email}</p>
         </Card.Body>
       </Card>
     </div>
