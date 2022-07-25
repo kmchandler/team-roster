@@ -13,10 +13,10 @@ function Home() {
         margin: '0 auto',
       }}
     >
-      <h2>Hello, {user.displayName}!</h2>
-      <div className="teamNameMain">
-        <h3 className="welcomeTo">Welcome to </h3>
-        <h3 className="teamNameMainPage"> 1.21 Jigawatts Productions</h3>
+      <div>
+        <h1 className="roost">ROOST</h1>
+        <h4 className="taglineLogin">your home for team management</h4>
+        <h2 className="mainGreeting">Welcome, {user.displayName}!</h2>
       </div>
     </div>
   );

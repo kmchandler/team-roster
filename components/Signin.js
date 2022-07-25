@@ -9,13 +9,14 @@ function Signin() {
       style={{
         height: '90vh',
         padding: '30px',
-        maxWidth: '400px',
         margin: '0 auto',
       }}
     >
-      <h1>Hi there!</h1>
-      <p>Click the button below to login!</p>
-      <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
+      <div>
+        <h1 className="roost">ROOST</h1>
+        <h4 className="taglineLogin">your home for team management</h4>
+      </div>
+      <Button type="button" size="lg" className="copy-btn loginBtn" onClick={signIn}>
         Sign In
       </Button>
     </div>
