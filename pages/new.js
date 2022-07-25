@@ -79,11 +79,11 @@ function PlayerForm({ obj }) {
         </FloatingLabel>
 
         <FloatingLabel controlId="floatingInput2" label="Phone Number" className="mb-3">
-          <Form.Control type="tel" placeholder="123-456-7890" name="phone" value={formInput.phone} onChange={handleChange} required />
+          <Form.Control type="tel" placeholder="123-456-7890" name="phone" value={formInput.phone} onChange={handleChange} />
         </FloatingLabel>
 
         <FloatingLabel controlId="floatingInput2" label="E-mail" className="mb-3">
-          <Form.Control type="email" placeholder="E-mail" name="email" value={formInput.email} onChange={handleChange} required />
+          <Form.Control type="email" placeholder="E-mail" name="email" value={formInput.email} onChange={handleChange} />
         </FloatingLabel>
 
         <FloatingLabel controlId="floatingTextarea" label="Additional Notes" className="mb-3">
