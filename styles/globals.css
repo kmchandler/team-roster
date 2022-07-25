@@ -229,3 +229,19 @@ body {
   margin-right: 10px;
   font-size: x-small;
 }
+
+.memberNameDetails {
+  color: #00303F;
+}
+
+.memberRoleDetails {
+  margin-top: 25px;
+}
+
+.memberPhoneDetails {
+  margin-top: -13px;
+}
+
+.memberEmailDetails {
+  margin-top: -13px;
+}
