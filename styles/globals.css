@@ -109,6 +109,8 @@ body {
 .cardBody {
   background-color: #7A9D96;
   color: white;
+  border-style: solid;
+  border-color: transparent;
 }
 
 .teamButton {
@@ -194,33 +196,37 @@ body {
   font-family: 'Rampart One', cursive;
   font-size: 100px;
   color: #00303F;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .taglineLogin {
   margin-top: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 35px;
   font-family: 'Baloo 2', cursive;
   font-size: 40px;
   color: #DCAE1D;
+  margin-left: 10px;
 }
 
 .loginBtn {
   max-width: 150px;
-  margin-left: auto;
-  margin-right: auto;
   font-family: 'Baloo 2', cursive;
-  background-color: #CAE4DB;
-  border-style: solid;
-  border-color: #00303F;
-  color: #00303F; 
-}
-
-.loginBtn:hover {
   background-color: #00303F;
   border-style: solid;
   border-color: #00303F;
   color: #CAE4DB;
+  margin-bottom: 20px;
+  justify-content: center;
+  margin-left: 42%;
+  margin-top: 50px;
+}
+
+.loginBtn:hover {
+  background-color: #7A9D96;
+  border-style: solid;
+  border-color: #00303F;
+  color: #00303F;
 }
 
 .welcomeToMain {
@@ -244,4 +250,14 @@ body {
 
 .memberEmailDetails {
   margin-top: -13px;
+}
+
+.loginCardDiv {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 165px;
+  width: 650px;
+  background-color: #7A9D96;
+  border: none;
+  box-shadow: #000000ad 4px 4px 8px;
 }
