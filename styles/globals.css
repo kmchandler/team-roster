@@ -276,10 +276,43 @@ body {
   border: none;
 }
 
-#responsive-navbar-nav > form > input {
-  background-color: #00303F;
-  border-color: #DCAE1D;
+#__next > div > div > div.text-center.my-4.teamCardsDiv > form > input {
+  color: #00303F;
+  margin-top: 15px;
+  width: 250px;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-left: 38px;
+  height: 40px;
+}
+
+.teamHeaderDiv {
+  margin-top: 25px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.searchBar {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: -10px;
+}
+
+.resetBtn {
+  height: 35px;
+  margin-top: 18px;
+  background-color: #CAE4DB;
+  border: none;
+  color: #00303F;
+  font-size: larger;
+  margin-left: -3px;
+}
+
+.resetBtn:hover {
+  border: none;
+  background-color: #CAE4DB;
   color: #DCAE1D;
-  height: 30px;
-  margin-top: 5px;
 }
