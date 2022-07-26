@@ -116,9 +116,8 @@ body {
   background-color: #00303F;
   border-style: solid;
   border-color: #00303F;
-  width: 180px;
-  justify-content: center;
-  align-self: center;
+  max-width: 180px;
+  min-width: 180px;
 }
 
 .teamButton:hover {
@@ -190,7 +189,6 @@ body {
 .playerCardDiv {
   box-shadow: #000000ad 4px 4px 8px;
   border: none;
-
 }
 
 .roost {
@@ -263,56 +261,28 @@ body {
   box-shadow: #000000ad 4px 4px 8px;
 }
 
-.searchBtn {
-  color: #DCAE1D;
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-}
-
-.searchBtn:hover {
-  color: white;
-  background-color: transparent;
-  border: none;
-}
-
 #__next > div > div > div.text-center.my-4.teamCardsDiv > form > input {
   color: #00303F;
   margin-top: 15px;
-  width: 250px;
-  flex-flow: column wrap;
-  justify-content: center;
-  margin-left: 38px;
+  max-width: 230px;
+  min-width: 230px;
   height: 40px;
 }
 
 .teamHeaderDiv {
   margin-top: 25px;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row;
+  column-gap: 21%;
 }
 
 .searchBar {
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
-  margin-top: 25px;
+  justify-self: flex-start;
   margin-bottom: -10px;
-}
-
-.resetBtn {
-  height: 35px;
-  margin-top: 18px;
-  background-color: #CAE4DB;
-  border: none;
-  color: #00303F;
-  font-size: larger;
-  margin-left: -3px;
-}
-
-.resetBtn:hover {
-  border: none;
-  background-color: #CAE4DB;
-  color: #DCAE1D;
+  margin-left: 45px;
+  height: 40px;
+  margin-top: -1px;
+  max-width: 230px;
+  min-width: 230px;
 }
