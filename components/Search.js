@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 export default function Search({ setFilteredPlayers, players }) {
@@ -8,7 +8,6 @@ export default function Search({ setFilteredPlayers, players }) {
   const handleChange = (e) => {
     const { value } = e.target;
     setInput(value);
-
     const results = players.filter((player) => player.name.toLowerCase().includes(value.toLowerCase()) || player.role.toLowerCase().includes(value.toLowerCase()));
     setFilteredPlayers(results);
   };
@@ -23,7 +22,6 @@ export default function Search({ setFilteredPlayers, players }) {
         name="playerSearch"
         onChange={handleChange}
       />
-      <Button type="button" className="resetBtn">X</Button>
     </Form>
   );
 }
