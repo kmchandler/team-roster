@@ -25,13 +25,13 @@ export default function Team() {
 
   return (
     <>
-      <div className="teamHeaderDiv">
-        <div className="text-center my-4 teamCardsDiv">
-          <h1 className="teamName">Meet the Jigawatts</h1>
+      <div className="text-center my-4 teamCardsDiv">
+        <h1 className="teamName">Meet the Jigawatts</h1>
+        <div className="teamHeaderDiv">
+          <Search players={players} setFilteredPlayers={setFilteredPlayers} />
           <Link href="/new" passHref>
             <Button className="teamButton">Add A Team Member</Button>
           </Link>
-          <Search players={players} setFilteredPlayers={setFilteredPlayers} />
         </div>
         <div className="d-flex flex-wrap cardContainer">
           {filteredPlayers.map((player) => (
