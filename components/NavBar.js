@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Link from 'next/link';
 import {
   Navbar, Container, Nav,
@@ -30,15 +28,6 @@ export default function NavBar() {
             </Link>
             <button type="button" className="signOutButton navLinkColor" onClick={signOut}>Sign Out</button>
           </Nav>
-          <Form className="d-flex searchBar">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button className="searchBtn navLinkColor" variant="outline-success">Search</Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
