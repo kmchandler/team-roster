@@ -16,16 +16,18 @@ function PlayerCard({ playerObj, onUpdate }) {
       <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
       <Card.Body className="cardBody">
         <Card.Title>{playerObj.name}</Card.Title>
-        <p>Job: {playerObj?.role?.join(', ')}</p>
-        <Link href={`/${playerObj.firebaseKey}`} passHref>
-          <Button className="detailsButton">DETAILS</Button>
-        </Link>
-        <Link href={`/edit/${playerObj.firebaseKey}`} passHref>
-          <Button className="editButton">EDIT</Button>
-        </Link>
-        <Button className="deleteButton m-2" onClick={deleteThisPlayer}>
-          DELETE
-        </Button>
+        <p className="playerCardJobs">Job: {playerObj?.role?.join(', ')}</p>
+        <div className="playerCardBtns">
+          <Link href={`/${playerObj.firebaseKey}`} passHref>
+            <Button className="detailsButton">DETAILS</Button>
+          </Link>
+          <Link href={`/edit/${playerObj.firebaseKey}`} passHref>
+            <Button className="editButton">EDIT</Button>
+          </Link>
+          <Button className="deleteButton m-2" onClick={deleteThisPlayer}>
+            DELETE
+          </Button>
+        </div>
       </Card.Body>
     </Card>
   );
