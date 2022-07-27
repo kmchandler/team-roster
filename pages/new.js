@@ -12,7 +12,7 @@ import roles from '../sample-data/roles.json';
 const initialState = {
   imageUrl: '',
   name: '',
-  role: '',
+  role: [],
   phone: '',
   email: '',
   notes: '',
@@ -110,7 +110,8 @@ PlayerForm.propTypes = {
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    role: PropTypes.string,
+    // eslint-disable-next-line react/forbid-prop-types
+    role: PropTypes.array,
     notes: PropTypes.string,
     phone: PropTypes.string,
     email: PropTypes.string,
