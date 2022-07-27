@@ -9,7 +9,7 @@ function DetailsCard({ playerObj }) {
         <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
         <Card.Body className="cardBody">
           <Card.Title className="memberNameDetails">{playerObj.name}</Card.Title>
-          <p className="memberRoleDetails">Role: {playerObj.role}</p>
+          <p className="memberRoleDetails">Job: {playerObj?.role?.join(', ')}</p>
           <p className="memberPhoneDetails">Phone: {playerObj.phone}</p>
           <p className="memberEmailDetails">E-mail: {playerObj.email}</p>
         </Card.Body>

@@ -16,7 +16,7 @@ function PlayerCard({ playerObj, onUpdate }) {
       <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
       <Card.Body className="cardBody">
         <Card.Title>{playerObj.name}</Card.Title>
-        <p>Role: {playerObj?.role?.join(', ')}</p>
+        <p>Job: {playerObj?.role?.join(', ')}</p>
         <Link href={`/${playerObj.firebaseKey}`} passHref>
           <Button className="detailsButton">DETAILS</Button>
         </Link>
