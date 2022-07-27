@@ -36,7 +36,7 @@ PlayerCard.propTypes = {
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    role: PropTypes.arrayOf,
+    role: PropTypes.arrayOf(PropTypes.string),
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

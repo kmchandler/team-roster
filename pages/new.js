@@ -110,7 +110,7 @@ PlayerForm.propTypes = {
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    role: PropTypes.arrayOf,
+    role: PropTypes.arrayOf(PropTypes.string),
     notes: PropTypes.string,
     phone: PropTypes.string,
     email: PropTypes.string,
