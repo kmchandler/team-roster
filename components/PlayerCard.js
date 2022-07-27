@@ -37,7 +37,8 @@ PlayerCard.propTypes = {
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    role: PropTypes.string,
+    // eslint-disable-next-line react/forbid-prop-types
+    role: PropTypes.array,
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
