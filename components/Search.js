@@ -30,7 +30,7 @@ Search.propTypes = {
   players: PropTypes.arrayOf(PropTypes.shape(
     {
       name: PropTypes.string,
-      role: PropTypes.arrayOf,
+      role: PropTypes.arrayOf(PropTypes.string),
     },
   )).isRequired,
   setFilteredPlayers: PropTypes.func.isRequired,
