@@ -4,7 +4,7 @@
     "imageUrl": "http://dummyimage.com/104x100.png/dddddd/000000",
     "name": "Bertina Scotchmore",
     "notes": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-    "role": "Surveyor",
+    "role": ["Engineer"],
     "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY"
   },
   {
@@ -12,7 +12,7 @@
     "imageUrl": "http://dummyimage.com/110x100.png/dddddd/000000",
     "name": "Alice Mustoe",
     "notes": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-    "role": "Subcontractor",
+    "role": ["Surveyor, Contractor"],
     "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY"
   },
   {
@@ -20,7 +20,7 @@
     "imageUrl": "http://dummyimage.com/250x100.png/ff4444/ffffff",
     "name": "Park Blinder",
     "notes": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-    "role": "Project Manager",
+    "role": ["Surveyor"],
     "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY"
   },
   {
@@ -28,7 +28,7 @@
     "imageUrl": "http://dummyimage.com/153x100.png/5fa2dd/ffffff",
     "name": "Patin Mussetti",
     "notes": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-    "role": "Subcontractor",
+    "role": ["Surveyor, Contractor"],
     "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY"
   },
   {
@@ -36,7 +36,7 @@
     "imageUrl": "http://dummyimage.com/131x100.png/5fa2dd/ffffff",
     "name": "Theo Drennan",
     "notes": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-    "role": "Engineer",
+    "role": ["Surveyor"],
     "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY"
   }
 ]
