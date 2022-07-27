@@ -8,7 +8,7 @@ export default function Search({ setFilteredPlayers, players }) {
   const handleChange = (e) => {
     const { value } = e.target;
     setInput(value);
-    const results = players.filter((player) => player.name.toString().toLowerCase().includes(value.toLowerCase()) || player.role.toString().toLowerCase().includes(value.toLowerCase()));
+    const results = players.filter((player) => player.name.toLowerCase().includes(value.toLowerCase()) || player.role.toString().toLowerCase().includes(value.toLowerCase()));
     setFilteredPlayers(results);
   };
   return (
