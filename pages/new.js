@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
-import { check } from 'prettier';
 import { useAuth } from '../utils/context/authContext';
 import { createPlayer, updatePlayer } from '../api/playerData';
 import roles from '../sample-data/roles.json';
@@ -21,11 +20,15 @@ const initialState = {
 
 function PlayerForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
+  const [checked, setChecked] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
-    if (obj.firebaseKey) setFormInput(obj);
+    if (obj.firebaseKey) {
+      setFormInput(obj);
+      setChecked(obj.role);
+    }
   }, [obj, user]);
 
   const handleChange = (e) => {
@@ -38,6 +41,7 @@ function PlayerForm({ obj }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    formInput.role = checked;
     if (obj.firebaseKey) {
       updatePlayer(formInput)
         .then(() => router.push('/team'));
@@ -47,6 +51,16 @@ function PlayerForm({ obj }) {
         router.push('/team');
       });
     }
+  };
+
+  const handleClick = (e) => {
+    let updatedRole = [...checked];
+    if (e.target.checked) {
+      updatedRole = [...checked, e.target.name];
+    } else {
+      updatedRole.splice(checked.indexOf(e.target.name), 1);
+    }
+    setChecked(updatedRole);
   };
 
   return (
@@ -60,19 +74,6 @@ function PlayerForm({ obj }) {
           <Form.Control type="url" placeholder="Photo URL" name="imageUrl" value={formInput.imageUrl} onChange={handleChange} required />
         </FloatingLabel>
 
-        <h5>Role</h5>
-        <Form>
-          {roles.map((role) => (
-            <div key={roles.id} className="mb-3">
-              <Form.Check
-                type={check}
-                id={role.id}
-                label={role.type}
-              />
-            </div>
-          ))}
-        </Form>
-
         <FloatingLabel controlId="floatingInput2" label="Phone Number" className="mb-3">
           <Form.Control type="tel" placeholder="123-456-7890" name="phone" value={formInput.phone} onChange={handleChange} />
         </FloatingLabel>
@@ -80,6 +81,20 @@ function PlayerForm({ obj }) {
         <FloatingLabel controlId="floatingInput2" label="E-mail" className="mb-3">
           <Form.Control type="email" placeholder="E-mail" name="email" value={formInput.email} onChange={handleChange} />
         </FloatingLabel>
+
+        <h5>Role</h5>
+        {roles.map((role) => (
+          <div key={role.id} className="mb-3">
+            <Form.Check
+              type="checkbox"
+              id={role.id}
+              label={role.type}
+              checked={checked.indexOf(role.type) >= 0}
+              onChange={handleClick}
+              name={role.type}
+            />
+          </div>
+        ))}
 
         <FloatingLabel controlId="floatingTextarea" label="Additional Notes" className="mb-3">
           <Form.Control as="textarea" placeholder="Notes" style={{ height: '100px' }} name="notes" value={formInput.notes} onChange={handleChange} />
