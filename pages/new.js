@@ -27,7 +27,7 @@ function PlayerForm({ obj }) {
   useEffect(() => {
     if (obj.firebaseKey) {
       setFormInput(obj);
-      setChecked(obj.role);
+      setChecked(obj.role || []);
     }
   }, [obj, user]);
 
@@ -110,8 +110,7 @@ PlayerForm.propTypes = {
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    // eslint-disable-next-line react/forbid-prop-types
-    role: PropTypes.array,
+    role: PropTypes.arrayOf,
     notes: PropTypes.string,
     phone: PropTypes.string,
     email: PropTypes.string,

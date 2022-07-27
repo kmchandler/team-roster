@@ -11,13 +11,13 @@ function PlayerCard({ playerObj, onUpdate }) {
       deleteSinglePlayer(playerObj.firebaseKey).then(() => onUpdate());
     }
   };
-
+  console.warn(playerObj.role);
   return (
     <Card className="playerCardDiv" style={{ width: '18rem', margin: '10px' }}>
       <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
       <Card.Body className="cardBody">
         <Card.Title>{playerObj.name}</Card.Title>
-        <p>Role: {playerObj.role}</p>
+        <p>Role: {playerObj?.role?.join(', ')}</p>
         <Link href={`/${playerObj.firebaseKey}`} passHref>
           <Button className="detailsButton">DETAILS</Button>
         </Link>
@@ -37,8 +37,7 @@ PlayerCard.propTypes = {
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    // eslint-disable-next-line react/forbid-prop-types
-    role: PropTypes.array,
+    role: PropTypes.arrayOf,
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
