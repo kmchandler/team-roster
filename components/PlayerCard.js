@@ -11,7 +11,6 @@ function PlayerCard({ playerObj, onUpdate }) {
       deleteSinglePlayer(playerObj.firebaseKey).then(() => onUpdate());
     }
   };
-  console.warn(playerObj.role);
   return (
     <Card className="playerCardDiv" style={{ width: '18rem', margin: '10px' }}>
       <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
