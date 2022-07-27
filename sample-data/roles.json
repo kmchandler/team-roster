@@ -1,0 +1,47 @@
+[
+  {
+    "id": "aa57feb1-aca2-4a71-b95f-b857e8c1abd6",
+    "type": "Actor",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "id": "8bb64a8d-c7e8-4fbd-a80c-eede208ba1bb",
+    "type": "Assistant Director",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "id": "430ad6a7-aadb-4774-a330-97477de6b6cf",
+    "type": "Camera Operator",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "id": "0f8e1280-ef46-4945-b412-7e84a14955d1",
+    "type": "Clacker",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "id": "df82b8ef-fa3c-4647-9bf2-989329ccab60",
+    "type": "Director",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "id": "f27bf44a-35b5-4c74-bce6-090e38605340",
+    "type": "Editor",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "id": "eddb0dc5-7040-4b28-ba30-a747e8dca0f4",
+    "type": "Foley",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "id": "a352aeab-4fee-4197-8c78-828eba3913a1",
+    "type": "Gaffer",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "id": "d63c2278-babf-45e7-9888-7ce18ac3f22f",
+    "type": "Sound Operator",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  }
+]

@@ -1,11 +1,14 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
+import { check } from 'prettier';
 import { useAuth } from '../utils/context/authContext';
 import { createPlayer, updatePlayer } from '../api/playerData';
+import roles from '../sample-data/roles.json';
 
 const initialState = {
   imageUrl: '',
@@ -57,26 +60,18 @@ function PlayerForm({ obj }) {
           <Form.Control type="url" placeholder="Photo URL" name="imageUrl" value={formInput.imageUrl} onChange={handleChange} required />
         </FloatingLabel>
 
-        <FloatingLabel controlId="floatingSelect" label="Team Member's Role">
-          <Form.Select
-            aria-label="Role"
-            name="role"
-            onChange={handleChange}
-            className="mb-3"
-            value={formInput.role}
-            required
-          >
-            <option disabled selected key="empty" value="">Select A Role</option>
-            <option value="Actor">Actor</option>
-            <option value="Assistant Director">Assistant Director</option>
-            <option value="Camera Operator">Camera Operator</option>
-            <option value="Clacker">Clacker</option>
-            <option value="Director">Director</option>
-            <option value="Editor">Editor</option>
-            <option value="Foley">Foley</option>
-            <option value="Sound Operator">Sound Operator</option>
-          </Form.Select>
-        </FloatingLabel>
+        <h5>Role</h5>
+        <Form>
+          {roles.map((role) => (
+            <div key={roles.id} className="mb-3">
+              <Form.Check
+                type={check}
+                id={role.id}
+                label={role.type}
+              />
+            </div>
+          ))}
+        </Form>
 
         <FloatingLabel controlId="floatingInput2" label="Phone Number" className="mb-3">
           <Form.Control type="tel" placeholder="123-456-7890" name="phone" value={formInput.phone} onChange={handleChange} />
