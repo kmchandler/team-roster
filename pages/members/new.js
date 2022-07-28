@@ -92,7 +92,7 @@ function PlayerForm({ obj }) {
                 <option
                   key={team.firebaseKey}
                   value={team.firebaseKey}
-                  selected={obj.firebaseKey === team.firebaseKey}
+                  selected={obj.teamName === team.firebaseKey}
                 >
                   {team.teamName}
                 </option>

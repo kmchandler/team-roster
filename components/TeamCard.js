@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { deleteSingleTeam } from '../api/teamsData';
 
 function TeamCard({ teamObj, onUpdate }) {
+  console.warn(teamObj);
   const deleteThisTeam = () => {
     if (window.confirm(`Delete ${teamObj.teamName}?`)) {
       deleteSingleTeam(teamObj.firebaseKey).then(() => onUpdate());
@@ -17,7 +18,7 @@ function TeamCard({ teamObj, onUpdate }) {
       <Card.Body className="cardBody">
         <Card.Title>{teamObj.teamName}</Card.Title>
         <div className="memberCardBtns">
-          <Link href="/members/team" passHref>
+          <Link href={`/members/${teamObj.firebaseKey}`} passHref>
             <Button className="detailsButton">MEMBERS</Button>
           </Link>
           <Link href={`/team/edit/${teamObj.firebaseKey}`} passHref>
