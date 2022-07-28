@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
-import { useAuth } from '../utils/context/authContext';
-import { getPlayers } from '../api/playerData';
-import PlayerCard from '../components/PlayerCard';
-import Search from '../components/Search';
+import { useAuth } from '../../utils/context/authContext';
+import { getPlayers } from '../../api/playerData';
+import PlayerCard from '../../components/PlayerCard';
+import Search from '../../components/Search';
 
 export default function Team() {
   const [players, setPlayers] = useState([]);

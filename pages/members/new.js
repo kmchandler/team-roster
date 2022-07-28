@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
-import { useAuth } from '../utils/context/authContext';
-import { createPlayer, updatePlayer } from '../api/playerData';
-import roles from '../sample-data/roles.json';
+import { useAuth } from '../../utils/context/authContext';
+import { createPlayer, updatePlayer } from '../../api/playerData';
+import roles from '../../sample-data/roles.json';
 
 const initialState = {
   imageUrl: '',
@@ -44,11 +44,11 @@ function PlayerForm({ obj }) {
     formInput.role = checked;
     if (obj.firebaseKey) {
       updatePlayer(formInput)
-        .then(() => router.push('/team'));
+        .then(() => router.push('/members/team'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createPlayer(payload).then(() => {
-        router.push('/team');
+        router.push('/members/team');
       });
     }
   };
