@@ -1,0 +1,50 @@
+[
+  {
+    "firebaseKey": "2d5dfeee-0bdb-43f2-b5cf-ba054e45ea57",
+    "imageUrl": "http://dummyimage.com/145x100.png/5fa2dd/ffffff",
+    "teamName": "Crist and Sons",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "a3e0f1dd-bec9-4408-8f0d-6f4f38b8359d",
+    "imageUrl": "http://dummyimage.com/127x100.png/cc0000/ffffff",
+    "teamName": "Ward-Hudson",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "5a181b95-4e8a-4027-8945-ed2806a812d9",
+    "imageUrl": "http://dummyimage.com/129x100.png/cc0000/ffffff",
+    "teamName": "Ondricka, Rolfson and Dibbert",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "66bea475-d4a4-4071-9340-dcc70c68f560",
+    "imageUrl": "http://dummyimage.com/172x100.png/ff4444/ffffff",
+    "teamName": "Greenfelder and Sons",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "2d6a2200-763b-4aac-b74c-591c6537d751",
+    "imageUrl": "http://dummyimage.com/226x100.png/cc0000/ffffff",
+    "teamName": "Heller, Ziemann and Wehner",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "a17071b8-9302-4bc3-9eaf-58f0c031f7a8",
+    "imageUrl": "http://dummyimage.com/190x100.png/5fa2dd/ffffff",
+    "teamName": "Green, Considine and Hills",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "94c8ebf7-a2d2-42e3-8822-14022e9b4b39",
+    "imageUrl": "http://dummyimage.com/180x100.png/cc0000/ffffff",
+    "teamName": "Wintheiser-Stroman",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  },
+  {
+    "firebaseKey": "6f7238cd-2368-44fc-86ca-9c83d1322c94",
+    "imageUrl": "http://dummyimage.com/232x100.png/cc0000/ffffff",
+    "teamName": "Schowalter, Quitzon and Pacocha",
+    "uid": "2X6Uw3IpTMXqHwm9EldqIyZFMY02"
+  }
+]

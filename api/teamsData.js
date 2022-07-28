@@ -50,7 +50,7 @@ const updateTeam = (teamObj) => new Promise((resolve, reject) => {
 });
 
 const getTeamPlayers = (firebaseKey) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/players.json?orderBy="playerId"&equalTo="${firebaseKey}"`)
+  axios.get(`${dbUrl}/players.json?orderBy="firebaseKey"&equalTo="${firebaseKey}"`)
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
