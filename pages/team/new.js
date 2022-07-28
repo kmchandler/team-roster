@@ -10,7 +10,7 @@ import { updateTeam, createTeam } from '../../api/teamsData';
 
 const initialState = {
   imageUrl: '',
-  teamName: [],
+  teamName: '',
 };
 
 function TeamForm({ obj }) {
@@ -66,7 +66,7 @@ TeamForm.propTypes = {
   obj: PropTypes.shape({
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
-    teamName: PropTypes.arrayOf(PropTypes.string),
+    teamName: PropTypes.string,
     uid: PropTypes.string,
   }),
 };

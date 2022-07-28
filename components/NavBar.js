@@ -20,10 +20,10 @@ export default function NavBar() {
             {/* <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link> */}
-            <Link passHref href="/team">
-              <Nav.Link className="navLinkColor">Team</Nav.Link>
+            <Link passHref href="/teams">
+              <Nav.Link className="navLinkColor">Teams</Nav.Link>
             </Link>
-            <Link passHref href="/new">
+            <Link passHref href="/team/new">
               <Nav.Link className="navLinkColor">New</Nav.Link>
             </Link>
             <button type="button" className="signOutButton navLinkColor" onClick={signOut}>Sign Out</button>
