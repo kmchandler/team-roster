@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
+import { getTeams } from '../../api/teamsData';
 import { useAuth } from '../../utils/context/authContext';
 import { createPlayer, updatePlayer } from '../../api/playerData';
 import roles from '../../sample-data/roles.json';
@@ -12,6 +13,7 @@ import roles from '../../sample-data/roles.json';
 const initialState = {
   imageUrl: '',
   name: '',
+  teamName: [],
   role: [],
   phone: '',
   email: '',
@@ -21,12 +23,14 @@ const initialState = {
 function PlayerForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
   const [checked, setChecked] = useState([]);
+  const [teams, setTeams] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
     if (obj.firebaseKey) {
       setFormInput(obj);
+      getTeams(user.uid).then(setTeams);
       setChecked(obj.role || []);
     }
   }, [obj, user]);
@@ -74,6 +78,29 @@ function PlayerForm({ obj }) {
           <Form.Control type="url" placeholder="Photo URL" name="imageUrl" value={formInput.imageUrl} onChange={handleChange} required />
         </FloatingLabel>
 
+        <FloatingLabel controlId="floatingSelect" label="Team">
+          <Form.Select
+            aria-label="Team"
+            name="teamName"
+            onChange={handleChange}
+            className="mb-3"
+            required
+          >
+            <option value="">Select a Team</option>
+            {
+              teams.map((team) => (
+                <option
+                  key={team.firebaseKey}
+                  value={team.firebaseKey}
+                  selected={obj.firebaseKey === team.firebaseKey}
+                >
+                  {team.teamName}
+                </option>
+              ))
+            }
+          </Form.Select>
+        </FloatingLabel>
+
         <FloatingLabel controlId="floatingInput2" label="Phone Number" className="mb-3">
           <Form.Control type="tel" placeholder="123-456-7890" name="phone" value={formInput.phone} onChange={handleChange} />
         </FloatingLabel>
@@ -111,6 +138,7 @@ PlayerForm.propTypes = {
     imageUrl: PropTypes.string,
     name: PropTypes.string,
     role: PropTypes.arrayOf(PropTypes.string),
+    teamName: PropTypes.arrayOf(PropTypes.string),
     notes: PropTypes.string,
     phone: PropTypes.string,
     email: PropTypes.string,
