@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { getSinglePlayer } from '../api/playerData';
-import DetailsCard from '../components/DetailsCard';
+import PlayerForm from '../new';
+import { getSinglePlayer } from '../../../api/playerData';
 
-export default function EditAuthor() {
+export default function EditMembers() {
   const [editItem, setEditItem] = useState({});
   const router = useRouter();
   const { firebaseKey } = router.query;
@@ -12,5 +12,5 @@ export default function EditAuthor() {
     getSinglePlayer(firebaseKey).then(setEditItem);
   }, [firebaseKey]);
 
-  return (<DetailsCard playerObj={editItem} />);
+  return (<PlayerForm obj={editItem} />);
 }
