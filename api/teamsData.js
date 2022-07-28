@@ -1,7 +1,7 @@
 import axios from 'axios';
-import firebaseConfig from './apiKeys';
+import { clientCredentials } from '../utils/client';
 
-const dbUrl = firebaseConfig.databaseURL;
+const dbUrl = clientCredentials.databaseURL;
 
 const getTeams = (uid) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/teams.json?orderBy="uid"&equalTo="${uid}"`)

@@ -12,15 +12,12 @@ function TeamCard({ teamObj, onUpdate }) {
     }
   };
   return (
-    <Card className="teamCardDiv" style={{ width: '18rem', margin: '10px' }}>
+    <Card className="memberCardDiv" style={{ width: '18rem', margin: '10px' }}>
       <Card.Img className="cardImage" variant="top" src={teamObj.imageUrl} alt={teamObj.teamName} style={{ height: '400px' }} />
       <Card.Body className="cardBody">
         <Card.Title>{teamObj.teamName}</Card.Title>
-        <div className="teamCardBtns">
-          <Link href={`/${teamObj.firebaseKey}`} passHref>
-            <Button className="detailsButton">DETAILS</Button>
-          </Link>
-          <Link href={`/edit/${teamObj.firebaseKey}`} passHref>
+        <div className="memberCardBtns">
+          <Link href={`/team/edit/${teamObj.firebaseKey}`} passHref>
             <Button className="editButton">EDIT</Button>
           </Link>
           <Button className="deleteButton m-2" onClick={deleteThisTeam}>
@@ -37,7 +34,6 @@ TeamCard.propTypes = {
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     teamName: PropTypes.string,
-    role: PropTypes.arrayOf(PropTypes.string),
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

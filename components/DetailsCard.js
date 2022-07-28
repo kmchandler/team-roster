@@ -23,7 +23,7 @@ DetailsCard.propTypes = {
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    role: PropTypes.string,
+    role: PropTypes.arrayOf(PropTypes.string),
     phone: PropTypes.string,
     email: PropTypes.string,
     uid: PropTypes.string,

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
 import { getTeams } from '../api/teamsData';
-import Search from '../components/Search';
+import SearchTeams from '../components/SearchTeams';
 import TeamCard from '../components/TeamCard';
 
 export default function Teams() {
@@ -26,9 +26,9 @@ export default function Teams() {
   return (
     <>
       <div className="text-center my-4 teamCardsDiv">
-        <h1 className="teamName">Meet the Team</h1>
+        <h1 className="teamName">Teams</h1>
         <div className="teamHeaderDiv">
-          <Search teams={teams} setFilteredTeams={setFilteredTeams} />
+          <SearchTeams teams={teams} setFilteredTeams={setFilteredTeams} />
           <Link href="/new" passHref>
             <Button className="teamButton">Add A Team</Button>
           </Link>

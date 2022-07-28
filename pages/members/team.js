@@ -29,7 +29,7 @@ export default function Team() {
         <h1 className="teamName">Meet the Jigawatts</h1>
         <div className="teamHeaderDiv">
           <Search players={players} setFilteredPlayers={setFilteredPlayers} />
-          <Link href="/new" passHref>
+          <Link href="/members/new" passHref>
             <Button className="teamButton">Add A Team Member</Button>
           </Link>
         </div>
