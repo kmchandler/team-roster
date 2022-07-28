@@ -50,7 +50,7 @@ function TeamForm({ obj }) {
       <Form className="teamForm" onSubmit={handleSubmit}>
         <h2 className="formHeaderText mt-5">{obj.firebaseKey ? 'Update' : 'Add'} Team</h2>
         <FloatingLabel controlId="floatingInput1" label="Enter Team Name" className="mb-3">
-          <Form.Control type="text" placeholder="Enter Team Name" name="name" value={formInput.teamName} onChange={handleChange} required />
+          <Form.Control type="text" placeholder="Enter Team Name" name="teamName" value={formInput.teamName} onChange={handleChange} required />
         </FloatingLabel>
         <FloatingLabel controlId="floatingInput2" label="Photo URL" className="mb-3">
           <Form.Control type="url" placeholder="Photo URL" name="imageUrl" value={formInput.imageUrl} onChange={handleChange} required />

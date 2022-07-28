@@ -12,24 +12,26 @@ function PlayerCard({ playerObj, onUpdate }) {
     }
   };
   return (
-    <Card className="playerCardDiv" style={{ width: '18rem', margin: '10px' }}>
-      <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
-      <Card.Body className="cardBody">
-        <Card.Title>{playerObj.name}</Card.Title>
-        <p className="playerCardJobs">Job: {playerObj?.role?.join(', ')}</p>
-        <div className="playerCardBtns">
-          <Link href={`/${playerObj.firebaseKey}`} passHref>
-            <Button className="detailsButton">DETAILS</Button>
-          </Link>
-          <Link href={`/edit/${playerObj.firebaseKey}`} passHref>
-            <Button className="editButton">EDIT</Button>
-          </Link>
-          <Button className="deleteButton m-2" onClick={deleteThisPlayer}>
-            DELETE
-          </Button>
-        </div>
-      </Card.Body>
-    </Card>
+    <>
+      <Card className="playerCardDiv" style={{ width: '18rem', margin: '10px' }}>
+        <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
+        <Card.Body className="cardBody">
+          <Card.Title>{playerObj.name}</Card.Title>
+          <p className="playerCardJobs">Job: {playerObj?.role?.join(', ')}</p>
+          <div className="playerCardBtns">
+            <Link href={`/members/${playerObj.firebaseKey}`} passHref>
+              <Button className="detailsButton">DETAILS</Button>
+            </Link>
+            <Link href={`/members/edit/${playerObj.firebaseKey}`} passHref>
+              <Button className="editButton">EDIT</Button>
+            </Link>
+            <Button className="deleteButton m-2" onClick={deleteThisPlayer}>
+              DELETE
+            </Button>
+          </div>
+        </Card.Body>
+      </Card>
+    </>
   );
 }
 

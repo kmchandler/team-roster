@@ -29,7 +29,7 @@ export default function Teams() {
         <h1 className="teamName">Teams</h1>
         <div className="teamHeaderDiv">
           <SearchTeams teams={teams} setFilteredTeams={setFilteredTeams} />
-          <Link href="/new" passHref>
+          <Link href="/team/new" passHref>
             <Button className="teamButton">Add A Team</Button>
           </Link>
         </div>
