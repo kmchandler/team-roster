@@ -302,3 +302,11 @@ body {
 .playerCardJobs {
   text-align: left;
 }
+
+.prevPageButton {
+  margin-top: 20px;
+}
+
+.prevPageButton:hover {
+  background-color: #CAE4DB;
+}

@@ -17,6 +17,9 @@ function TeamCard({ teamObj, onUpdate }) {
       <Card.Body className="cardBody">
         <Card.Title>{teamObj.teamName}</Card.Title>
         <div className="memberCardBtns">
+          <Link href="/members/team" passHref>
+            <Button className="detailsButton">MEMBERS</Button>
+          </Link>
           <Link href={`/team/edit/${teamObj.firebaseKey}`} passHref>
             <Button className="editButton">EDIT</Button>
           </Link>

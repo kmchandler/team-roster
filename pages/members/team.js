@@ -26,7 +26,7 @@ export default function Team() {
   return (
     <>
       <div className="text-center my-4 teamCardsDiv">
-        <h1 className="teamName">Meet the Jigawatts</h1>
+        <h1 className="teamName">Meet the Team</h1>
         <div className="teamHeaderDiv">
           <Search players={players} setFilteredPlayers={setFilteredPlayers} />
           <Link href="/members/new" passHref>
