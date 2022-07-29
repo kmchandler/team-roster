@@ -13,7 +13,7 @@ import roles from '../../sample-data/roles.json';
 const initialState = {
   imageUrl: '',
   name: '',
-  teamName: [],
+  teamId: '',
   role: [],
   phone: '',
   email: '',
@@ -92,7 +92,7 @@ function PlayerForm({ obj }) {
                 <option
                   key={team.firebaseKey}
                   value={team.firebaseKey}
-                  selected={obj.teamName === team.firebaseKey}
+                  selected={obj.teamId === team.firebaseKey}
                 >
                   {team.teamName}
                 </option>
@@ -138,7 +138,7 @@ PlayerForm.propTypes = {
     imageUrl: PropTypes.string,
     name: PropTypes.string,
     role: PropTypes.arrayOf(PropTypes.string),
-    teamName: PropTypes.arrayOf(PropTypes.string),
+    teamId: PropTypes.string,
     notes: PropTypes.string,
     phone: PropTypes.string,
     email: PropTypes.string,

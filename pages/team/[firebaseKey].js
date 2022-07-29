@@ -8,8 +8,8 @@ import { useAuth } from '../../utils/context/authContext';
 import PlayerCard from '../../components/PlayerCard';
 import Search from '../../components/Search';
 
-export default function ViewAuthor() {
-  const [teamMembers, setTeamMembers] = useState({});
+export default function ViewTeam() {
+  const [teamMembers, setTeamMembers] = useState([]);
   const router = useRouter();
   const { firebaseKey } = router.query;
   const [filteredPlayers, setFilteredPlayers] = useState([]);
@@ -18,6 +18,7 @@ export default function ViewAuthor() {
   const getAllThePlayers = () => {
     viewTeamDetails(firebaseKey).then((playa) => {
       setTeamMembers(playa);
+      setFilteredPlayers(playa);
     });
   };
 
@@ -36,7 +37,7 @@ export default function ViewAuthor() {
           </Link>
         </div>
         <div className="d-flex flex-wrap cardContainer">
-          {filteredPlayers.map((player) => (
+          {[filteredPlayers].map((player) => (
             <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getAllThePlayers} />
           ))}
         </div>
