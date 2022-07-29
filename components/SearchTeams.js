@@ -27,7 +27,7 @@ export default function Search({ setFilteredTeams, teams }) {
 }
 
 Search.propTypes = {
-  teams: PropTypes.arrayOf(PropTypes.shape(
+  teams: PropTypes.objectOf(PropTypes.shape(
     {
       teamName: PropTypes.string,
     },
