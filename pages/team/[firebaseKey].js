@@ -16,9 +16,9 @@ export default function ViewTeam() {
   const { user } = useAuth();
 
   const getAllThePlayers = () => {
-    viewTeamDetails(firebaseKey).then((playa) => {
-      setTeamMembers(playa);
-      setFilteredPlayers(playa);
+    viewTeamDetails(firebaseKey).then((teamPlayersArray) => {
+      setTeamMembers(teamPlayersArray);
+      setFilteredPlayers(teamPlayersArray);
     });
   };
 
@@ -37,7 +37,7 @@ export default function ViewTeam() {
           </Link>
         </div>
         <div className="d-flex flex-wrap cardContainer">
-          {[filteredPlayers].map((player) => (
+          {filteredPlayers?.players?.map((player) => (
             <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getAllThePlayers} />
           ))}
         </div>
