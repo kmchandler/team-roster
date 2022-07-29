@@ -5,10 +5,12 @@ import PropTypes from 'prop-types';
 export default function Search({ setFilteredPlayers, players }) {
   const [input, setInput] = useState('');
 
+  const playerObj = Object.values(players);
+
   const handleChange = (e) => {
     const { value } = e.target;
     setInput(value);
-    const results = players.filter((player) => player.name.toLowerCase().includes(value.toLowerCase()) || player.role.toString().toLowerCase().includes(value.toLowerCase()));
+    const results = playerObj.filter((player) => player?.name?.toLowerCase().includes(value.toLowerCase()) || player?.role?.toString().toLowerCase().includes(value.toLowerCase()));
     setFilteredPlayers(results);
   };
   return (
