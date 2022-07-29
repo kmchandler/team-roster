@@ -17,7 +17,7 @@ function PlayerCard({ playerObj, onUpdate }) {
         <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
         <Card.Body className="cardBody">
           <Card.Title>{playerObj.name}</Card.Title>
-          <p className="playerCardTeam">Team: {playerObj.team}</p>
+          {/* <p className="playerCardTeam">Team: {teamObj.teamName}</p> */}
           <p className="playerCardJobs">Job: {playerObj?.role?.join(', ')}</p>
           <div className="playerCardBtns">
             <Link href={`/members/${playerObj.firebaseKey}`} passHref>
@@ -41,7 +41,7 @@ PlayerCard.propTypes = {
     firebaseKey: PropTypes.string,
     imageUrl: PropTypes.string,
     name: PropTypes.string,
-    team: PropTypes.string,
+    teamId: PropTypes.string,
     role: PropTypes.arrayOf(PropTypes.string),
     uid: PropTypes.string,
   }).isRequired,

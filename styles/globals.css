@@ -310,3 +310,11 @@ body {
 .prevPageButton:hover {
   background-color: #CAE4DB;
 }
+
+.detailsButtonTeam {
+  margin-left: 2px;
+}
+
+.deleteButtonTeam {
+  margin-right: -3px;
+}

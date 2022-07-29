@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import PlayerForm from '../new';
+import React, { useState, useEffect } from 'react';
 import { getSinglePlayer } from '../../../api/playerData';
+import MemberForm from '../../../components/MemberForm';
 
 export default function EditMembers() {
   const [editItem, setEditItem] = useState({});
@@ -12,5 +12,5 @@ export default function EditMembers() {
     getSinglePlayer(firebaseKey).then(setEditItem);
   }, [firebaseKey]);
 
-  return (<PlayerForm obj={editItem} />);
+  return (<MemberForm obj={editItem} />);
 }

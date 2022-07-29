@@ -15,16 +15,16 @@ function TeamCard({ teamObj, onUpdate }) {
   return (
     <Card className="memberCardDiv" style={{ width: '18rem', margin: '10px' }}>
       <Card.Img className="cardImage" variant="top" src={teamObj.imageUrl} alt={teamObj.teamName} style={{ height: '400px' }} />
-      <Card.Body className="cardBody">
+      <Card.Body className="cardBody teamCardBody">
         <Card.Title>{teamObj.teamName}</Card.Title>
-        <div className="memberCardBtns">
+        <div className="memberCardBtns teamCardBtns">
           <Link href={`/team/${teamObj.firebaseKey}`} passHref>
-            <Button className="detailsButton">MEMBERS</Button>
+            <Button className="detailsButtonTeam detailsButton">MEMBERS</Button>
           </Link>
           <Link href={`/team/edit/${teamObj.firebaseKey}`} passHref>
             <Button className="editButton">EDIT</Button>
           </Link>
-          <Button className="deleteButton m-2" onClick={deleteThisTeam}>
+          <Button className="deleteButton deleteButtonTeam m-2" onClick={deleteThisTeam}>
             DELETE
           </Button>
         </div>
