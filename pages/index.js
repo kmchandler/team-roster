@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { useAuth } from '../utils/context/authContext';
 
@@ -12,6 +12,10 @@ import { useAuth } from '../utils/context/authContext';
 
 function Home() {
   const { user } = useAuth();
+
+  useEffect(() => {
+    document.title = 'ROOST';
+  }, []);
 
   return (
     <div
