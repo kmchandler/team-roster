@@ -2,10 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
+import Head from 'next/head';
 import { useAuth } from '../../utils/context/authContext';
 import { getPlayers } from '../../api/playerData';
 import PlayerCard from '../../components/PlayerCard';
 import Search from '../../components/Search';
+
+  <Head>
+    <title>ROOST</title>
+    <meta name="description" content="Meta description for the team page" />
+  </Head>;
 
 export default function Team() {
   const [players, setPlayers] = useState([]);

@@ -1,12 +1,18 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
 import { updateTeam, createTeam } from '../../api/teamsData';
+
+  <Head>
+    <title>ROOST</title>
+    <meta name="description" content="Meta description for the team page" />
+  </Head>;
 
 const initialState = {
   imageUrl: '',

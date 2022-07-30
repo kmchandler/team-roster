@@ -2,11 +2,17 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Head from 'next/head';
 import Button from 'react-bootstrap/Button';
 import { viewTeamDetails } from '../../api/mergedData';
 import { useAuth } from '../../utils/context/authContext';
 import PlayerCard from '../../components/PlayerCard';
 import Search from '../../components/Search';
+
+  <Head>
+    <title>ROOST</title>
+    <meta name="description" content="Meta description for the team page" />
+  </Head>;
 
 export default function ViewTeam() {
   const [teamMembers, setTeamMembers] = useState([]);
