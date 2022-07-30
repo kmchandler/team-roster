@@ -14,11 +14,13 @@ export default function ViewTeam() {
   const { firebaseKey } = router.query;
   const [filteredPlayers, setFilteredPlayers] = useState([]);
   const { user } = useAuth();
+  const [teamName, setTeamName] = useState('');
 
   const getAllThePlayers = () => {
-    viewTeamDetails(firebaseKey).then((teamPlayersArray) => {
-      setTeamMembers(teamPlayersArray);
-      setFilteredPlayers(teamPlayersArray);
+    viewTeamDetails(firebaseKey).then((teamPlayers) => {
+      setTeamMembers(teamPlayers);
+      setFilteredPlayers(teamPlayers);
+      setTeamName(teamPlayers.teamName);
     });
   };
 
@@ -38,7 +40,7 @@ export default function ViewTeam() {
         </div>
         <div className="d-flex flex-wrap cardContainer">
           {filteredPlayers?.players?.map((player) => (
-            <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getAllThePlayers} />
+            <PlayerCard key={player.firebaseKey} teamName={teamName} playerObj={player} onUpdate={getAllThePlayers} />
           ))}
         </div>
       </div>

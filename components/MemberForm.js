@@ -30,10 +30,13 @@ function MemberForm({ obj }) {
   useEffect(() => {
     if (obj.firebaseKey) {
       setFormInput(obj);
-      getTeams(user.uid).then(setTeams);
       setChecked(obj.role || []);
     }
   }, [obj, user]);
+
+  useEffect(() => {
+    getTeams(user.uid).then(setTeams);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,11 +51,11 @@ function MemberForm({ obj }) {
     formInput.role = checked;
     if (obj.firebaseKey) {
       updatePlayer(formInput)
-        .then(() => router.push('/members/team'));
+        .then(() => router.push(`/members/${obj.firebaseKey}`));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createPlayer(payload).then(() => {
-        router.push('/members/team');
+        router.push(`/team/${formInput.teamId}`);
       });
     }
   };
@@ -81,14 +84,14 @@ function MemberForm({ obj }) {
         <FloatingLabel controlId="floatingSelect" label="Team">
           <Form.Select
             aria-label="Team"
-            name="teamName"
+            name="teamId"
             onChange={handleChange}
             className="mb-3"
             required
           >
             <option value="">Select a Team</option>
             {
-              teams?.map((team) => (
+              teams.map((team) => (
                 <option
                   key={team.firebaseKey}
                   value={team.firebaseKey}
