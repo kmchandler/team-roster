@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 function DetailsCard({ playerObj }) {
   return (
     <>
       <div className="prevPage">
-        <Link href="/members/team" passHref>
+        {/* <Link href="/members/team" passHref>
           <Button className="editButton prevPageButton">Previous Page</Button>
-        </Link>
+        </Link> */}
       </div>
       <div className="detailsCard">
         <Card style={{ width: '18rem', margin: '10px' }}>

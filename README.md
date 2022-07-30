@@ -29,3 +29,4 @@ https://github.com/kmchandler
 <img src="styles/ERD.png" alt="ERD" title="ERD">
         
 ## Loom Video Walkthrough
+https://www.loom.com/share/06daa0533af847cbb2308ebbaf49372b 
