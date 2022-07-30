@@ -243,18 +243,22 @@ body {
 
 .memberNameDetails {
   color: #00303F;
+  max-width: 100%;
 }
 
 .memberRoleDetails {
   margin-top: 25px;
+  max-width: 100%;
 }
 
 .memberPhoneDetails {
   margin-top: -13px;
+  max-width: 100%;
 }
 
 .memberEmailDetails {
   margin-top: -13px;
+  max-width: 100%;
 }
 
 .loginCardDiv {
@@ -317,4 +321,19 @@ body {
 
 .deleteButtonTeam {
   margin-right: -3px;
+}
+
+.memberCardDiv {
+  box-shadow: #000000ad 4px 4px 8px;
+  border: none;
+}
+
+.detailsDiv {
+  box-shadow: #000000ad 4px 4px 8px;
+  border: none;
+}
+
+.playerName {
+  max-width: 100%;
+  color: #00303F;
 }
