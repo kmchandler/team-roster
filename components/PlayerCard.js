@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { deleteSinglePlayer } from '../api/playerData';
 
-function PlayerCard({ playerObj, onUpdate }) {
+function PlayerCard({ playerObj, onUpdate, teamName }) {
   const deleteThisPlayer = () => {
     if (window.confirm(`Delete ${playerObj.name}?`)) {
       deleteSinglePlayer(playerObj.firebaseKey).then(() => onUpdate());
@@ -17,7 +17,9 @@ function PlayerCard({ playerObj, onUpdate }) {
         <Card.Img className="cardImage" variant="top" src={playerObj.imageUrl} alt={playerObj.name} style={{ height: '400px' }} />
         <Card.Body className="cardBody">
           <Card.Title>{playerObj.name}</Card.Title>
-          {/* <p className="playerCardTeam">Team: {teamObj.teamName}</p> */}
+          <br />
+          <hr />
+          <p className="playerCardTeam">Team: {teamName}</p>
           <p className="playerCardJobs">Job: {playerObj?.role?.join(', ')}</p>
           <div className="playerCardBtns">
             <Link href={`/members/${playerObj.firebaseKey}`} passHref>
@@ -45,6 +47,7 @@ PlayerCard.propTypes = {
     role: PropTypes.arrayOf(PropTypes.string),
     uid: PropTypes.string,
   }).isRequired,
+  teamName: PropTypes.string.isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
 

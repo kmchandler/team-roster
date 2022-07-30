@@ -4,7 +4,7 @@ import { getSinglePlayer } from '../../api/playerData';
 import DetailsCard from '../../components/DetailsCard';
 
 export default function EditMemberDetails() {
-  const [editItem, setEditItem] = useState({});
+  const [editItem, setEditItem] = useState([]);
   const router = useRouter();
   const { firebaseKey } = router.query;
 
