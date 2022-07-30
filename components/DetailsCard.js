@@ -8,7 +8,7 @@ function DetailsCard({ playerObj }) {
   return (
     <>
       <div className="prevPage">
-        {/* <Link href="`/team/${teamObj.firebaseKey}`" passHref>
+        {/* <Link href="`/team/${teamObj}`" passHref>
           <Button className="editButton prevPageButton">Previous Page</Button>
         </Link> */}
       </div>
